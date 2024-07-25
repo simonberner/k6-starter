@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+
+# TypeScript
+*.tsbuildinfo
+dist/
+out/
+
+# k6 test artifacts
+test-results/
+*.log
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.test
+.env.production
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Dependency directories
+jspm_packages/
+bower_components/
+
+# IDE and editor specific
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
