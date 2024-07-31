@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "testp": "k6 run dist/protocol-test.js",
-    "testb": "k6 run dist/browser-test.js"
+    "testp": "tsc && k6 run dist/protocol-test.js",
+    "testb": "tsc && k6 run dist/browser-test.js"
   },
   "keywords": [],
   "author": "",
