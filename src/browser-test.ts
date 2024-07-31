@@ -1,5 +1,6 @@
 import {browser} from 'k6/browser'
 import {check} from "k6";
+import {LoginPage} from "./page_objects/login-page";
 
 export const options = {
     scenarios: {
@@ -21,20 +22,12 @@ export default async function browserTest() {
     // Arrange
     const context = await browser.newContext();
     const page = await context.newPage();
+    const login_page = new LoginPage(page);
 
     try {
         // Act
-        await page.goto("https://test.k6.io/my_messages.php");
-        await page.locator('input[name="login"]').type("admin");
-        await page.locator('input[name="password"]').type("123");
-        await page.locator('input[type="submit"]').click();
-
-        // or we could use:
-        // await Promise.all([
-        //     page.locator('input[type="submit"]').click()
-        //     ...
-        //     ...
-        // ]);
+        await login_page.gotoLoginPage();
+        await login_page.login("admin", "123");
 
         // Assert
         const headerText = await page.locator('h2').textContent();
