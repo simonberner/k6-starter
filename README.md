@@ -1,6 +1,7 @@
 # Performance Testing with k6 - A Starter Project
 
-This project is currently based on [k6 v0.52.0](https://github.com/grafana/k6/releases)
+This is a simple starter project which can be cloned to start performance testing with [k6](https://k6.io/). It is
+currently based on [k6 v0.52.0](https://github.com/grafana/k6/releases).
 
 ## Setup
 
@@ -29,8 +30,16 @@ This project is currently based on [k6 v0.52.0](https://github.com/grafana/k6/re
 - [Protocol-Level Testing](https://grafana.com/docs/k6/latest/using-k6/http-requests/#http-requests)
 - [Browser-Level Testing](https://grafana.com/docs/k6/latest/using-k6-browser/#use-case-for-browser-testing)
 
+### Hybrid Testing
+
+As browser based testing with a lot of virtual users is resource-intensive, it may make sense to combine testing on the
+protocol (http/backend) level and on the browser (frontend) and go with a hybrid approach.
+[Here](https://grafana.com/docs/k6/latest/using-k6-browser/recommended-practices/hybrid-approach-to-performance/#hybrid-performance-with-k6-browser)
+is an example how this can be achieved.
+
 ## Resources
 
 - [Official Website](https://k6.io/)
 - [Documentation](https://grafana.com/docs/k6/latest/)
 - [k6 browser testing](https://grafana.com/docs/k6/latest/using-k6-browser/)
+- [k6 browser options](https://grafana.com/docs/k6/latest/using-k6-browser/options/)
