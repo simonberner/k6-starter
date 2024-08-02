@@ -20,7 +20,7 @@ export class LoginPage {
         this.loginButton = page.locator('input[type="submit"]');
     }
 
-    public async login(username: string, password: string): Promise<void> {
+    async login(username: string, password: string): Promise<void> {
         await Promise.all([
             this.loginTextField.fill(username),
             this.passwordField.fill(password),
@@ -28,7 +28,11 @@ export class LoginPage {
         ])
     }
 
-    public async gotoLoginPage() {
+    async goto() {
         return await this.page.goto("https://test.k6.io/my_messages.php");
+    }
+
+    async getHeaderText() {
+        return await this.page.locator('h2').textContent();
     }
 }
