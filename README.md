@@ -15,6 +15,10 @@ currently based on [k6 v0.52.0](https://github.com/grafana/k6/releases).
 2. Run the protocol test with: `npm run testp`
 3. Run the browser test with: `npm run testb`
 
+## Current issues ⚠️
+
+Check the [issues page](https://github.com/simonberner/k6-starter/issues) to get an overview over the open issues I am currently struggling with, or are in the backlog for this project.
+
 ## Test APIs
 
 - https://test-api.k6.io/
