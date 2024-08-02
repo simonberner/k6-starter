@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "testp": "tsc && k6 run dist/protocol-test.js",
-    "testb": "tsc && K6_BROWSER_HEADLESS=false K6_BROWSER_ARGS='show-property-changed-rects' k6 run dist/browser-test.js"
+    "testp": "tsc && k6 run dist/tests/protocol-test.js",
+    "testb": "tsc && K6_BROWSER_HEADLESS=false K6_BROWSER_ARGS='show-property-changed-rects' k6 run dist/tests/browser-test.js"
   },
   "keywords": [],
   "author": "",
