@@ -1,5 +1,5 @@
 import {browser, Locator, Page} from 'k6/browser'
-import {check} from "k6";
+import {check, sleep} from "k6";
 // import {LoginPage} from "../page_objects/login-page";
 
 export const options = {
@@ -73,6 +73,7 @@ class LoginPage {
     }
 
     async getHeaderText() {
+        sleep(0.4); // wait in order to get the text content of h2
         return await this.page.locator('h2').textContent();
     }
 }
