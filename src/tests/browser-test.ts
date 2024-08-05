@@ -36,7 +36,7 @@ export default async function browserTest() {
         });
 
     } finally {
-        await page.close();
+        await context.close();
     }
 }
 
