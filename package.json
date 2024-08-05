@@ -5,7 +5,7 @@
   "scripts": {
     "build": "tsc",
     "testp": "tsc && k6 run dist/tests/protocol-test.js",
-    "testb": "tsc && K6_BROWSER_HEADLESS=false K6_BROWSER_ARGS='show-property-changed-rects' k6 run dist/tests/browser-test.js"
+    "testb": "tsc && K6_BROWSER_HEADLESS=false K6_BROWSER_ARGS='show-property-changed-rects' K6_WEB_DASHBOARD=true K6_WEB_DASHBOARD_EXPORT=html-report.html k6 run dist/tests/browser-test.js"
   },
   "keywords": [],
   "author": "",
