@@ -28,9 +28,11 @@ export default async function browserTest() {
         // When
         await login_page.goto();
         await login_page.login("admin", "123");
+        await page.screenshot();
 
         // Then
         const headerText = await login_page.getHeaderText();
+        await page.screenshot({path: 'screenshots/welcome-page.png'}); // as an example: taking a screenshot for debugging purposes
         check(headerText, {
             'Header text is ok': (ht) => ht === 'Welcome, admin!',
         });

@@ -9,6 +9,7 @@ out/
 # k6 test artifacts
 test-results/
 *.log
+screenshots/
 
 # Logs
 logs/
