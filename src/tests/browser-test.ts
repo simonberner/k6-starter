@@ -19,17 +19,17 @@ export const options = {
 };
 
 export default async function browserTest() {
-    // Arrange
+    // Given
     const context = await browser.newContext();
     const page = await context.newPage();
     const login_page = new LoginPage(page);
 
     try {
-        // Act
+        // When
         await login_page.goto();
         await login_page.login("admin", "123");
 
-        // Assert
+        // Then
         const headerText = await login_page.getHeaderText();
         check(headerText, {
             'Header text is ok': (ht) => ht === 'Welcome, admin!',
