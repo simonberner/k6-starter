@@ -17,7 +17,8 @@ currently based on [k6 v0.52.0](https://github.com/grafana/k6/releases).
 
 ## Current issues ⚠️
 
-Check the [issues page](https://github.com/simonberner/k6-starter/issues) to get an overview over the open issues I am currently struggling with, or are in the backlog for this project.
+Check the [issues page](https://github.com/simonberner/k6-starter/issues) to get an overview over the open issues I am
+currently struggling with, or are in the backlog for this project.
 
 ## Test APIs
 
@@ -40,6 +41,10 @@ As browser based testing with a lot of virtual users is resource-intensive, it m
 protocol (http/backend) level and on the browser (frontend) and go with a hybrid approach.
 [Here](https://grafana.com/docs/k6/latest/using-k6-browser/recommended-practices/hybrid-approach-to-performance/#hybrid-performance-with-k6-browser)
 is an example how this can be achieved.
+
+### Browser-Level Tests
+
+- [For debugging purposes, one can take screenshots for every action.](https://grafana.com/docs/k6/latest/testing-guides/load-testing-websites/#tips-for-writing-browser-level-scripts)
 
 ## Resources
 
