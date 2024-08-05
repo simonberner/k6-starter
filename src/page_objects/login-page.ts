@@ -29,10 +29,10 @@ export class LoginPage {
     }
 
     async goto() {
-        return await this.page.goto("https://test.k6.io/my_messages.php");
+        return this.page.goto("https://test.k6.io/my_messages.php");
     }
 
     async getHeaderText() {
-        return await this.page.locator('h2').textContent();
+        return this.page.locator('h2').textContent();
     }
 }

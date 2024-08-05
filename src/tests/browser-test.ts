@@ -69,11 +69,11 @@ class LoginPage {
     }
 
     async goto() {
-        return await this.page.goto("https://test.k6.io/my_messages.php");
+        return this.page.goto("https://test.k6.io/my_messages.php");
     }
 
     async getHeaderText() {
         sleep(0.4); // wait in order to get the text content of h2
-        return await this.page.locator('h2').textContent();
+        return this.page.locator('h2').textContent();
     }
 }
