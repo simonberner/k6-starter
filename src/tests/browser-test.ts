@@ -5,12 +5,19 @@ import {check, sleep} from "k6";
 export const options = {
     scenarios: {
         ui: {
-            executor: 'shared-iterations',
+            executor: 'ramping-vus',
             options: {
                 browser: {
                     type: 'chromium',
                 },
             },
+            // executor-specific configuration
+            startVUs: 0,
+            stages: [
+                { duration: '20s', target: 10 }, // ramping up from 0 to 10 VUs over 20 seconds
+                { duration: '10s', target: 0 }, // then down to 10 VUs over 10 seconds
+            ],
+            gracefulRampDown: '2s', // see https://grafana.com/docs/k6/latest/using-k6/scenarios/concepts/graceful-stop/#the-gracefulrampdown
         },
     },
     thresholds: {
