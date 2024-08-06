@@ -18,7 +18,7 @@ currently based on [k6 v0.52.0](https://github.com/grafana/k6/releases).
 ## Current issues ⚠️
 
 Check the [issues page](https://github.com/simonberner/k6-starter/issues) to get an overview over the open issues I am
-currently struggling with, or are in the backlog for this project.
+currently struggling with or are in the making/backlog for this project.
 
 ## Test APIs
 
@@ -34,6 +34,9 @@ currently struggling with, or are in the backlog for this project.
 
 - [Protocol-Level Testing](https://grafana.com/docs/k6/latest/using-k6/http-requests/#http-requests)
 - [Browser-Level Testing](https://grafana.com/docs/k6/latest/using-k6-browser/#use-case-for-browser-testing)
+- [Here](https://grafana.com/docs/k6/latest/testing-guides/load-testing-websites/#recommendations) are some
+  recommendations on when choosing which test level, all with the thing in mind that you can tailor it to your specific
+  needs.
 
 ### Hybrid Testing
 
@@ -44,7 +47,13 @@ is an example how this can be achieved.
 
 ### Browser-Level Tests
 
-- [For debugging purposes, one can take screenshots for every action.](https://grafana.com/docs/k6/latest/testing-guides/load-testing-websites/#tips-for-writing-browser-level-scripts)
+- For debugging purposes, one
+  can [take screenshots for every action.](https://grafana.com/docs/k6/latest/testing-guides/load-testing-websites/#tips-for-writing-browser-level-scripts)
+
+### Test Reporting
+
+- All about how k6 emits metrics from a test-run and reports them, can be read
+  up [here](https://grafana.com/docs/k6/latest/results-output/).
 
 ## Resources
 
