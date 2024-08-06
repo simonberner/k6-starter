@@ -10,6 +10,7 @@ out/
 test-results/
 *.log
 screenshots/
+html-report.html
 
 # Logs
 logs/
